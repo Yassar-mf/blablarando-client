@@ -1,0 +1,34 @@
+{
+  "expo": {
+    "name": "mon-navigation-app-kilo-v2",
+    "slug": "kilo-kelle",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/IMG-20241116-WA0003.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.yassarmaanli.kilokelle"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "d1d63d85-0626-4e07-9081-3eccd2787f56"
+      }
+    },
+    "owner": "yassarmaanli"
+  }
+}

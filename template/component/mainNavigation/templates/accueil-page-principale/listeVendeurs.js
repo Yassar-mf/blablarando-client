@@ -1,0 +1,172 @@
+const listeVendeur = [
+  {
+    id:1,
+    nom:"Nadid",
+    prenom:"Ahmed",
+    photo:{
+      secure_id:"",
+      secure_url:""
+    },
+    adresse:"Bamako",
+    telephone:"+33 567 891 011",
+    dateDeDepart:"22/07/24",
+    vol:"POUN8G5R",
+    kiloVendu:"25"
+  },
+  {
+    id:2,
+    nom:"Jo",
+    prenom:"Ahmed",
+    photo:{
+      secure_id:"",
+      secure_url:""
+    },
+    adresse:"Bamako",
+    telephone:"+33 567 891 011",
+    dateDeDepart:"23/07/24",
+    vol:"POUN8G5R",
+    kiloVendu:"25"
+  },
+  {
+    id:3,
+    nom:"Nadid",
+    prenom:"Ahmed",
+    photo:{
+      secure_id:"",
+      secure_url:""
+    },
+    adresse:"Bamako",
+    telephone:"+33 567 891 011",
+    dateDeDepart:"23/07/24",
+    vol:"POUN8G5R",
+    kiloVendu:"25"
+  },
+  {
+    id:4,
+    nom:"Jo",
+    prenom:"Ahmed",
+    photo:{
+      secure_id:"",
+      secure_url:""
+    },
+    adresse:"Bamako",
+    telephone:"+33 567 891 011",
+    dateDeDepart:"23/07/24",
+    vol:"POUN8G5R",
+    kiloVendu:"25"
+  },
+  {
+    id:5,
+    nom:"Nadid",
+    prenom:"Ahmed",
+    photo:{
+      secure_id:"",
+      secure_url:""
+    },
+    adresse:"Bamako",
+    telephone:"+33 567 891 011",
+    dateDeDepart:"23/07/24",
+    vol:"POUN8G5R",
+    kiloVendu:"25"
+  },
+  {
+    id:6,
+    nom:"Jo",
+    prenom:"Ahmed",
+    photo:{
+      secure_id:"",
+      secure_url:""
+    },
+    adresse:"Bamako",
+    telephone:"+33 567 891 011",
+    dateDeDepart:"23/07/24",
+    vol:"POUN8G5R",
+    kiloVendu:"25"
+  },
+  {
+    id:7,
+    nom:"Nadid",
+    prenom:"Ahmed",
+    photo:{
+      secure_id:"",
+      secure_url:""
+    },
+    adresse:"Bamako",
+    telephone:"+33 567 891 011",
+    dateDeDepart:"23/07/24",
+    vol:"POUN8G5R",
+    kiloVendu:"25"
+  },
+  {
+    id:8,
+    nom:"Jo",
+    prenom:"Ahmed",
+    photo:{
+      secure_id:"",
+      secure_url:""
+    },
+    adresse:"Bamako",
+    telephone:"+33 567 891 011",
+    dateDeDepart:"23/07/24",
+    vol:"POUN8G5R",
+    kiloVendu:"25"
+  },
+  {
+    id:9,
+    nom:"Nadid",
+    prenom:"Ahmed",
+    photo:{
+      secure_id:"",
+      secure_url:""
+    },
+    adresse:"Bamako",
+    telephone:"+33 567 891 011",
+    dateDeDepart:"23/07/24",
+    vol:"POUN8G5R",
+    kiloVendu:"25"
+  },
+  {
+    id:10,
+    nom:"Jo",
+    prenom:"Ahmed",
+    photo:{
+      secure_id:"",
+      secure_url:""
+    },
+    adresse:"Bamako",
+    telephone:"+33 567 891 011",
+    dateDeDepart:"23/07/24",
+    vol:"POUN8G5R",
+    kiloVendu:"25"
+  },
+  {
+    id:11,
+    nom:"Jo",
+    prenom:"Ahmedoux",
+    photo:{
+      secure_id:"",
+      secure_url:""
+    },
+    adresse:"Bamako",
+    telephone:"+33 567 891 011",
+    dateDeDepart:"23/07/24",
+    vol:"POUN8G5R",
+    kiloVendu:"25"
+  },
+  {
+    id:12,
+    nom:"Jo",
+    prenom:"Ahmedoux",
+    photo:{
+      secure_id:"",
+      secure_url:""
+    },
+    adresse:"Bamako",
+    telephone:"+33 567 891 011",
+    dateDeDepart:"23/07/24",
+    vol:"POUN8G5R",
+    kiloVendu:"25"
+  },
+]
+
+export default listeVendeur;
