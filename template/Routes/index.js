@@ -9,9 +9,7 @@ import MonVendre from '../component/mainNavigation/templates/monVendre/component
 import SaisieNouveauMotDePasse from "../component/mainNavigation/templates/monMotDePasseOublie/saisieNouveauMotDePasse"
 import MonPageIntermediaire from '../component/mainNavigation/templates/monLogin/pageIntermediaireBienvenue'
 import MonChoixAchatVendre from '../component/mainNavigation/templates/monChoixAchatVendre'
-
-import PaiementEnAttente from '../component/mainNavigation/templates/monPaiementEnAttenteListe'
-
+import VendreScreens from './VendreStack'
 import PaiementScreens from './PaiementStack'
 
 const mesRoutes = {
@@ -26,7 +24,8 @@ const mesRoutes = {
     SaisieNouveauMotDePasse,
     MonPageIntermediaire,
     MonChoixAchatVendre,
-    PaiementScreens
+    PaiementScreens,
+    VendreScreens
 }
 
 export default mesRoutes

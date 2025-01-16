@@ -3,26 +3,6 @@ import React from 'react';
 import { View, Text, StyleSheet, Pressable } from 'react-native';
 import {useNavigation} from '@react-navigation/native'
 import Couleurs from '../../../../../Constants/Couleurs'
-import postVendre from '../utils/postVendre';
-url = "https://kilo-kello-4d8ce17ec2a1.herokuapp.com/vendre"
-/*
-{
-      nom,
-      prenom,
-      adresse,
-      email,
-      telephone,
-      dateDeDepart,
-      dateDarrive,
-      vol,
-      kiloVendu,
-      prixUnitaire,
-      nbPourPrixGros,
-      prixEnGros,
-      selectedButtons
-}
-
-*/
 
 const PaiementConfirme = ({ route }) => {
   const navigation = useNavigation();
@@ -44,11 +24,10 @@ const PaiementConfirme = ({ route }) => {
       packages
 } = route.params.data
 
-  const res = postVendre(url,{data: route.params.data})  
 
   return (
     <View style={styles.container}>
-      <Pressable onPress={()=> navigation.navigate('Principal')}>
+      <Pressable onPress={()=> navigation.navigate('Accueil')}>
         <Text style={{...styles.text, paddingVertical : 20}}>Vente créé avec succès !</Text>
       </Pressable>        
         <View><Text style={styles.text}>Recap</Text>
