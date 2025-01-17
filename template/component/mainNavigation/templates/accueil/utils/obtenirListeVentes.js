@@ -10,10 +10,8 @@ const obtenirListeVentes = async () => {
         const response = await axios.get(url)
         console.log('erfsqe :',response)
         
-        
         const liste = response.data.liste
-    
-        console.log('listrrrrererazrezfafdsqFe :',liste)
+
         return liste;
     }catch(e){
         console.log('erreur nnnn:',e)

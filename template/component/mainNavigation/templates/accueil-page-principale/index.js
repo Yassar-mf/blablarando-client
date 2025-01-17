@@ -3,55 +3,32 @@ import { View, Text, StyleSheet, Animated, FlatList } from 'react-native';
 import RItem from './template/flatListItemTemplate'
 import donnees from './utils/obtenirListeVentes'
 import Couleurs from '../../../../Constants/Couleurs'
-import postLogin from './utils/postLogin';
 import AfficherMessageVide from './AfficherMessageVide'
 
 const AnimatedFlatList = Animated.createAnimatedComponent(FlatList);
 const itemHeight = 200;
 const App = ({ navigation, routeN, route }) => {
   const scrollY = useRef(new Animated.Value(0)).current;
-
-
   const email = routeN.params ? routeN.params.monEmail 
   : route.params.monEmail ? route.params.monEmail:'' 
-
-
- // const res = postLogin(routeN)
-
   const [listeVente,setListeVente] = useState([])
   const [showMessageVide,
          setShowMessageVide]
         = useState(false)
-
   useEffect(() => {
-
      const fetchListeVente = async () => {
         try {
           const liste = await donnees()
           const listeFiltree = routeN
             .params.listeAchatsFiltre; 
-
-           console.log('listeFiltree :',
-              listeFiltree.liste)
-          console.log(
-            'listeFiltree longueur',
-                      listeFiltree.liste.length)
-
-
           if(listeFiltree.liste.length > 0){
-            //appliquer les filtres
             setListeVente(listeFiltree.liste)
-            console.log('liste vente actualisé')
           }
-
-
-
         } catch (error) {
           console.log('eeeeeerrrrrrreeeeeur : ',error)
         }
     }
     fetchListeVente()
-
   }, [])
 
 
@@ -78,7 +55,6 @@ const App = ({ navigation, routeN, route }) => {
         setListeVente={
           setListeVente
         }
-
         />
 
     </View>)

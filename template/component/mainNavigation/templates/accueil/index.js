@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import donnees from './utils/obtenirListeVentes'
 import PageVide from './Views/pageVide'
 import  ListeVendeurs from './Views/listeDesVendeurs'
@@ -15,9 +15,7 @@ const App = ({ navigation, route }) => {
      const fetchListeVente = async () => {
         try {
           const liste = await donnees()
-          console.log('ljljkljlkj  jjjk liste :',liste)
           setListeVente(liste)
-
         } catch (error) {
           console.log('eeeeeerrrrrrreeeeeur : ',error)
         }
