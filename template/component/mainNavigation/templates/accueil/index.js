@@ -23,7 +23,7 @@ const App = ({ navigation, route }) => {
     fetchListeVente()
 
   }, [])
-
+  console.log('uudjjdlkJD  LJSQJDlkjdkl é"ééçàçàç 2222')
   return (
     <>
       {listeVente.length > 0 ?

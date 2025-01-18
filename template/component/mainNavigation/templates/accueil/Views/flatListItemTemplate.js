@@ -1,16 +1,27 @@
 
+import React, { useEffect, useState } from 'react';
 import { View, Text, Image,StyleSheet, Animated, FlatList, Pressable } from 'react-native';
-import transformParamHandler from '../utils/transformParamHandler'
-import transformHandler from '../utils/transformHandler'
-
+import transformParamH from '../utils/transformParamHandler'
+import transformH from '../utils/transformHandler'
+import obtenirPhoto from '../utils/obtenirPhoto'
+import Description from './FLITdesc'
 const RenderItem = ({ item, index, scrollY, styles, itemHeight, navigation }) => {
+  
+  let inputRange = transformParamH(index,itemHeight)[0]
+    let scaleOutputRange = transformParamH(index,itemHeight)[1]
+    let opacityOutputRange = transformParamH(index,itemHeight)[2]
+    const id = item.id ? item.id : 'avatar/mmrddmrff9ezsogu4vjm'
+    const [uriImage, setUriImage] = useState(null)
+    const [scale,opacity] = transformH(inputRange,scaleOutputRange,scrollY,opacityOutputRange)
 
-  let inputRange = transformParamHandler(index,itemHeight)[0]
-    let scaleOutputRange = transformParamHandler(index,itemHeight)[1]
-    let opacityOutputRange = transformParamHandler(index,itemHeight)[2]
-
-    const [scale,opacity] = transformHandler(inputRange,scaleOutputRange,scrollY,opacityOutputRange)
-
+    useEffect(()=>{
+      const fetchUri = async () =>{
+        const mUri = await obtenirPhoto(id)
+      console.log('m uri :',mUri)
+        setUriImage(mUri)
+      }
+      fetchUri()
+    },[])
     return (
       <Animated.View style={[styles.item, { opacity, transform: [{ scale }] }]}>
         <Pressable 
@@ -18,22 +29,12 @@ const RenderItem = ({ item, index, scrollY, styles, itemHeight, navigation }) =>
         style={{flexDirection:'row'
                 
         }}>
-            <Image
-            source={require('../4.jpg')}
+          <Image
+            source={{uri: uriImage}}
             style={{ width: 100, height: 100, borderRadius: 50, marginRight:30 }} // Adjust width, height, and borderRadius
           />
-          <View>
-            <Text style={styles.title}>{`${item.vendeur.nom} ${item.vendeur.prenom}`}</Text>
-            <Text style={styles.details}>{`Nombre de place: ${item.vente.nombrePlace}`}</Text>
-            <Text style={styles.details}>{`prix d'une place: ${item.vente.prix}`}</Text>
-            <Text style={styles.details}>{item.vente.nbPrixEnGros ? `offre pour ${item.vente.nbPrixEnGros} places achetées`:``}</Text>
-            <Text style={styles.details}>{item.vente.prixEnGros ? `${item.vente.prixEnGros} €`:``}</Text>
-            <Text style={styles.details}>Emballage accepté dans la voiture :</Text>
-            <Text style={styles.details}>{ item.vente.emballageCoffre.sachet == true ? `Sachet`:``}</Text>
-            <Text style={styles.details}>{ item.vente.emballageCoffre.carton ? `Carton`:``}</Text>
-            <Text style={styles.details}>{ item.vente.emballageCoffre.doggybag ? `Doggybag`:``}</Text>
-            
-          </View>
+
+          <Description styles={styles} item={item}/>
         </Pressable>
       </Animated.View>
     );

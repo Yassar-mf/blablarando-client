@@ -2,9 +2,8 @@ import React, { useRef,useState,useEffect } from 'react';
 import { View, Text, StyleSheet, Animated, FlatList } from 'react-native';
 import RItem from './template/flatListItemTemplate'
 import donnees from './utils/obtenirListeVentes'
-import Couleurs from '../../../../Constants/Couleurs'
 import AfficherMessageVide from './AfficherMessageVide'
-
+import styles from './template/styles'
 const AnimatedFlatList = Animated.createAnimatedComponent(FlatList);
 const itemHeight = 200;
 const App = ({ navigation, routeN, route }) => {
@@ -60,24 +59,5 @@ const App = ({ navigation, routeN, route }) => {
     </View>)
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: Couleurs.neutralColor_one,
-  },
-  item: {
-    height: itemHeight,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: Couleurs.primaryColor_two,
-    marginVertical: 8,
-    marginHorizontal: 16,
-    borderRadius: 10,
-    paddingVertical: 5,
-  },
-  title: {
-    fontSize: 32,
-  },
-});
 
 export default App;

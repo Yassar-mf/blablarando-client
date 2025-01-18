@@ -8,7 +8,6 @@ const AnimatedFlatList = Animated.createAnimatedComponent(FlatList);
 const App = ({ navigation, email, listeVente}) => {
   const scrollY = useRef(new Animated.Value(0)).current;
   const itemHeight = 200;
-
   return (
     <View style={styles.container}>
       <Text>{email=='email'?'':email}</Text>
