@@ -15,7 +15,7 @@ const ViewLieuRandonnee = ({lieuRandonnee, setLieuRandonnee}) => {
     console.log('lieux :',lieux)
   },[])
   return(
-    <View style={{height:'20%',flexDirection:'column',justifyContent:'center',alignItems:'center',paddingVertical:8}}>
+    <View style={{height:'11%',flexDirection:'column',justifyContent:'center',alignItems:'center',paddingVertical:8,backgroundColor:'blue'}}>
       <FlatList 
           data={lieux}
           renderItem={({item}) => <LieuRandoItem 

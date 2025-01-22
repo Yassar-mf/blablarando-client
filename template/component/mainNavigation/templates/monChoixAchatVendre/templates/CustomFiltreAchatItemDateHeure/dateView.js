@@ -7,8 +7,7 @@ import DateTimePicker from '@react-native-community/datetimepicker';
 const DateView = ({styles,date, showPicker, 
                      onChange, 
                      isPickerShow,
-                     setIsPickerShow,
-                     setDate,mode,titre}) => {
+                     mode,titre}) => {
 
   const options2 = {
     weekday: 'long', 

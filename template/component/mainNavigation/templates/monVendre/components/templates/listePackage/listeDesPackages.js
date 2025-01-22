@@ -45,7 +45,7 @@ const App = ({selectedButtons, setSelectedButtons}) => {
 
 const styles = StyleSheet.create({
   container: {
-    height:'15%',    
+    height:'8%',    
     paddingVertical: 10,
     backgroundColor: Couleurs.neutralColor_one,
   },

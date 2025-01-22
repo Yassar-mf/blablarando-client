@@ -5,13 +5,13 @@ import MonCustomFiltreAchatItemDateHeure from './CustomFiltreAchatItemDateHeure'
 import BoutonEnvoyer from './BoutonEnvoyer'
 const MonCustomFiltreAchat = ({route, navigation}) => {
 
-    const [kilo, setKilo] = useState(0)
+    const [place, setPlace] = useState(0)
     const [prixMax, setPrixMax]= useState(0)
     const [dateHeure, setDateHeure] = useState(new Date())
 
     useEffect( () => {
-        console.log('nouvelle valeur de kilo :',kilo)
-    },[kilo])
+        console.log('nouvelle valeur de kilo :',place)
+    },[place])
     useEffect( () => {
         console.log('nouvelle valeur de prixMax :',prixMax)
     },[prixMax])
@@ -24,11 +24,11 @@ const MonCustomFiltreAchat = ({route, navigation}) => {
     return (
         <View>
             <ScrollView >
-                <MonCustomFiltreAchatItem setFiltre={setKilo} filtre={kilo} titre={"kilo"} />
+                <MonCustomFiltreAchatItem setFiltre={setPlace} filtre={place} titre={"nombre de places minimum"} />
                 <MonCustomFiltreAchatItem setFiltre={setPrixMax} filtre={prixMax} titre={"Prix max"} />
                 <MonCustomFiltreAchatItemDateHeure setFiltre={setDateHeure} filtre={dateHeure} titre={"Date & heure"} />
             </ScrollView>
-            <BoutonEnvoyer kilo={kilo} prixMax={prixMax} dateHeure={dateHeure} navigation={navigation}/>
+            <BoutonEnvoyer kilo={place} prixMax={prixMax} dateHeure={dateHeure} navigation={navigation}/>
         </View>
     )
 

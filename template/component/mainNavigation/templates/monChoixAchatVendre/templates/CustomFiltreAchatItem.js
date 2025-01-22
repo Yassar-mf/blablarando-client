@@ -1,15 +1,18 @@
-import {TextInput, View, Text } from 'react-native'
-
-
-const CustomFiltreAchatItem = ({ setFiltre, filtre, titre}) => {
-    return(
+import { TextInput, View, Text } from 'react-native';
+import styles from './styles'
+const CustomFiltreAchatItem = ({ setFiltre, filtre, titre }) => {
+    return (
         <View>
             <Text>
                 {titre}
             </Text>
-            <TextInput placeholder={filtre} onChangeText={text => setFiltre(text)}/>
+            <TextInput 
+                placeholder={filtre?.toString() || ''} // Ensure placeholder is a string
+                onChangeText={text => setFiltre(text)}
+                style={styles.inpS}
+            />
         </View>
-    )
-}
+    );
+};
 
-export default CustomFiltreAchatItem
+export default CustomFiltreAchatItem;

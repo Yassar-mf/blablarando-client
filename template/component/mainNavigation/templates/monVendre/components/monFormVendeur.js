@@ -10,7 +10,7 @@ const MonFormulaire = ({ route }) => {
    const [adresse,setAdresse] = useState("")
    const [email,setEmail] = useState(route ? route.params.monEmail : defaultData)
    const [telephone,setTelephone] = useState("+12 345 67 89 10")
-   const [dateDeDepart,setDateDeDepart] = useState("25/11/2024")
+   const [dateDeDepart,setDateDeDepart] = useState(new Date(Date.now()))
    const [nbPlace, setNbPlace] = useState("1")
    const [prixUnitaire,setPrixUnitaire] = useState(10)
    const [nbPourPlaceGros,setNbPourPlaceGros] = useState("2")

@@ -1,22 +1,34 @@
 import axios from 'axios';
 import goPagePrincipaleFiltre from './goPagePrincipaleFiltre';
 //const url = process.env.URL_PROD
+
 const url = `https://blablarando.replit.app/listeParFiltre`
 
 const envoyerAuServeurPourFiltre = async (kilo, prixMax, dateTime,navigation) => {
+     console.log('yaaaaaaa',dateTime)
+    const newDate = new Date(dateTime.heure);
+    console.log('neeeeeeew daaaaaaate :',newDate)
+    const localDate = new Date(newDate.getTime() - newDate.getTimezoneOffset() * 60000);
+    console.log(localDate.toISOString()); // Corrige le décalage horaire
+
+    console.log('neeeeeeew daaaaaaate :',localDate.toISOString())
+    
     const filtreage =  {
             kilo: kilo,
             prixMax: prixMax,
-            dateHeure: dateTime
+            dateHeure: localDate.toISOString()
         };
+
+    console.log('filtreage :',filtreage)
 
     try {
 
         const response = await axios.post(url,filtreage);
         const liste = response.data;
+        console.log('liiiiiste :',liste)
 
         goPagePrincipaleFiltre(liste,navigation)
-        //return response.data;
+        return response.data;
     } catch (error) {
         console.error('Erreur lors de l\'envoi au serveur:', error);
         throw error;

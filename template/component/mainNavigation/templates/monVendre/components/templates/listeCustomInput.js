@@ -3,6 +3,7 @@ import Vendre from './BouttonVendre'
 import MonListeEmballageCoffre from './listePackage/listeDesPackages'
 import ListeLieuxRandonnee from './ViewLieuRandonnee'
 import CustomInput from './CustomInput'
+import DateHeurView from './dateHeureView'
 const vH = Dimensions.get('window').height
 const ListeCustomInput = ({nom,setNom,
                            prenom,setPrenom,
@@ -18,15 +19,17 @@ const ListeCustomInput = ({nom,setNom,
                            
                           lieuRandonnee, setLieuRandonnee}) => {
    return(
-     <View style={{height:vH, padding: 8, paddingVertical: 12, paddingBottom:'18%'}}>
+     <View style={{height:vH, padding: 8, paddingVertical: 12, paddingBottom:'21%'}}>
         <ScrollView contentContainerStyle={{flexWrap: 1}}>
           <CustomInput titre={"Nom"} valeur={nom} state={{type:""}} setValeur={setNom}/>
           <CustomInput titre={"Prenom"} valeur={prenom} state={{type:""}} setValeur={setPrenom}/>
           <CustomInput titre={"Adresse"} valeur={adresse} state={{type:""}} setValeur={setAdresse}/>
           <CustomInput titre={"email"} valeur={email} state={{type:"email"}} setValeur={setEmail}/>
           <CustomInput titre={"telephone"} valeur={telephone} state={{type:"numeric"}} setValeur={setTelephone}/>
-          <CustomInput titre={"date de départ"} valeur={dateDeDepart} state={{type:"date"}} setValeur={setDateDeDepart}/>
 
+
+          <DateHeurView date={dateDeDepart} setDate={setDateDeDepart} />
+          
           <CustomInput titre={"Nombre de place"} valeur={nbPlace} state={{type:"numeric"}} setValeur={setNbPlace}/>
           <CustomInput titre={"Prix unitaire"} valeur={prixUnitaire} state={{type:"numeric"}} setValeur={setPrixUnitaire}/>
           <CustomInput titre={"Nombre pour place en gros"} valeur={nbPourPlaceGros} state={{type:"numeric"}} setValeur={setNbPourPlaceGros}/>
@@ -48,6 +51,7 @@ const ListeCustomInput = ({nom,setNom,
             lieuRandonnee,
      }}
             />
+          <View style={{height:200}}/>
 
         </ScrollView>
      </View>

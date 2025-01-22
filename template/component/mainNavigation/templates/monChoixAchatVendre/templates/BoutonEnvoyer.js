@@ -10,7 +10,12 @@ const BoutonEnvoyer = ({kilo, prixMax, dateHeure, navigation}) => {
 
   return(
     <View>
-      <Pressable onPress={() => envoyerAuServeurPourFiltre(kilo, prixMax, dateHeure,navigation)}>
+      <Pressable onPress={() => {
+      console.log('yooooooo')
+      envoyerAuServeurPourFiltre(kilo, prixMax, dateHeure,navigation)}
+      }
+        style={{padding: 20, backgroundColor:"green", borderRadius: 10, margin: 10}}
+        >
         <Text>Envoyer</Text>
       </Pressable>
     </View>

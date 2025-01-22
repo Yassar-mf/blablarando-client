@@ -28,7 +28,8 @@ const MonBoutonVendre = ({data}) => {
                 alignItems:'center',
                 backgroundColor:Couleurs.primaryColor_one,
                 paddingVertical:20,
-                paddingHorizontal:20
+                paddingHorizontal:20,
+                marginBottom:20
                 }} 
                 onPress={()=>  handleCreerVente(navigation,data)}>
                   <Text style={{
