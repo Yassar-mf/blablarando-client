@@ -1,4 +1,4 @@
-
+import 'react-native-reanimated'
 
 import MonMainApp from './template/Routes/monMain'
 

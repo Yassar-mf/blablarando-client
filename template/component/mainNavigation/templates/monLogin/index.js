@@ -30,7 +30,7 @@ const LoginScreen = ({ navigation }) => {
               setMessageErreur(connectionMessage);
 
             if (connectionValidee) {
-              //navigation.navigate('MonPrincipal', { monEmail: email, url: monUrl });
+              
               navigation.navigate('MonPrincipal', { monEmail: email, url: monUrl });
             }
       } catch (error) {

@@ -18,7 +18,7 @@ const ListeCustomInput = ({nom,setNom,
                            
                           lieuRandonnee, setLieuRandonnee}) => {
    return(
-     <View style={{height:vH}}>
+     <View style={{height:vH, padding: 8, paddingVertical: 12, paddingBottom:'18%'}}>
         <ScrollView contentContainerStyle={{flexWrap: 1}}>
           <CustomInput titre={"Nom"} valeur={nom} state={{type:""}} setValeur={setNom}/>
           <CustomInput titre={"Prenom"} valeur={prenom} state={{type:""}} setValeur={setPrenom}/>

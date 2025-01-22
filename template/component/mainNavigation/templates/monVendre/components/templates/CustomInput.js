@@ -1,12 +1,12 @@
 import {View,Text, TextInput} from 'react-native'
-
+import styles from './styles/mesStyles'
 const monCustomTextInput = ({titre, valeur, state,setValeur}) => {
      const val = state.val ? state.val : ""
      console.log('vvvvv :', valeur)
      return(
        <View>
         <Text>{titre}</Text>
-        <TextInput style={{borderColor:"blue"}} value={valeur ? valeur : ""} 
+        <TextInput style={styles.inpS} value={valeur ? valeur : ""} 
                    onChangeText={setValeur}
                    
                    keyboardType={state.type} 
@@ -15,5 +15,7 @@ const monCustomTextInput = ({titre, valeur, state,setValeur}) => {
      )
 
 }
+
+
 
 export default monCustomTextInput;

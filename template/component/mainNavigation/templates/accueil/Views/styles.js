@@ -7,8 +7,7 @@ const styles = StyleSheet.create({
     backgroundColor: Couleurs.neutralColor_one
   },
   item: {
-    height: itemHeight,
-
+    height: 200,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: Couleurs.primaryColor_two,
