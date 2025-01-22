@@ -5,13 +5,13 @@ import goPagePrincipaleFiltre from './goPagePrincipaleFiltre';
 const url = `https://blablarando.replit.app/listeParFiltre`
 
 const envoyerAuServeurPourFiltre = async (kilo, prixMax, dateTime,navigation) => {
-     console.log('yaaaaaaa',dateTime)
+
     const newDate = new Date(dateTime.heure);
-    console.log('neeeeeeew daaaaaaate :',newDate)
+
     const localDate = new Date(newDate.getTime() - newDate.getTimezoneOffset() * 60000);
     console.log(localDate.toISOString()); // Corrige le décalage horaire
 
-    console.log('neeeeeeew daaaaaaate :',localDate.toISOString())
+
     
     const filtreage =  {
             kilo: kilo,
@@ -25,7 +25,7 @@ const envoyerAuServeurPourFiltre = async (kilo, prixMax, dateTime,navigation) =>
 
         const response = await axios.post(url,filtreage);
         const liste = response.data;
-        console.log('liiiiiste :',liste)
+
 
         goPagePrincipaleFiltre(liste,navigation)
         return response.data;

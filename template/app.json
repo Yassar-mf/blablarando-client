@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "mon-navigation-app-kilo-v2",
-    "slug": "kilo-kelle",
+    "name": "blablarando",
+    "slug": "blablarando",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/IMG-20241116-WA0003.png",
+    "icon": "./assets/blablarando.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/blablarando.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -19,7 +19,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.yassarmaanli.kilokelle"
+      "package": "com.yassarmaanli.blablarando"
     },
     "web": {
       "favicon": "./assets/favicon.png"
