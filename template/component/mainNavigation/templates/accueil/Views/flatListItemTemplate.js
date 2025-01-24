@@ -6,7 +6,8 @@ import transformParamH from '../utils/transformParamHandler'
 import transformH from '../utils/transformHandler'
 import obtenirPhoto from '../utils/obtenirPhoto'
 import Description from './FLITdesc'
-const RenderItem = ({ item, index, scrollY, styles, itemHeight, navigation }) => {
+import MonCarousel from './MonCarousel'
+const RenderItem = ({ item, index, scrollY, styles, itemHeight, navigation , setActiveCarousel,activeCarousel}) => {
   
   let inputRange = transformParamH(index,itemHeight)[0]
     let scaleOutputRange = transformParamH(index,itemHeight)[1]
@@ -27,7 +28,7 @@ const RenderItem = ({ item, index, scrollY, styles, itemHeight, navigation }) =>
       <Animated.View style={[styles.item, { opacity, transform: [{ scale }] }]}>
         <Pressable 
         onPress={()=>navigation.navigate('Login')}
-        style={{flexDirection:'row'
+        style={{flexDirection:'column',
 
         }}>
           <Image
@@ -37,6 +38,7 @@ const RenderItem = ({ item, index, scrollY, styles, itemHeight, navigation }) =>
 
           <Description styles={styles} item={item}/>
         </Pressable>
+        <MonCarousel setActiveCarousel={setActiveCarousel} activeCarousel={activeCarousel} photos={item}/>
       </Animated.View>
     );
   };
