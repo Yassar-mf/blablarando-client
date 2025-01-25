@@ -3,9 +3,11 @@ import { View, StyleSheet, Alert, Pressable } from 'react-native';
 import { TextInput, Text, Title } from 'react-native-paper';
 import styles from './styles/mesStyles'
 import connexion from './utils/connexion';
-
+import { useRoute } from '@react-navigation/native';
+import Urls from '../../../../Constants/urls'
 //const monUrl = "http://localhost:8083/connexion"
-const monUrl = "https://kilo-kello-4d8ce17ec2a1.herokuapp.com/connexion"
+//const monUrl = "https://kilo-kello-4d8ce17ec2a1.herokuapp.com/connexion"
+const monUrl = `${Urls.prod}/connexion`
 
 const LoginScreen = ({ navigation }) => {
   
@@ -33,6 +35,8 @@ const LoginScreen = ({ navigation }) => {
               
               navigation.navigate('MonPrincipal', { monEmail: email, url: monUrl });
             }
+
+          
       } catch (error) {
         console.error('Erreur de connexion :', error);
         setMessageErreur('Une erreur est survenue lors de la connexion.');

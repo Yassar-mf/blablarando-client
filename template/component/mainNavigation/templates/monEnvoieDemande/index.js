@@ -1,11 +1,12 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import { View, Text, Pressable} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import styles from './styles';
 import postPaiement from './utils/postPaiement';
 import calculerPrixTotal from './utils/calculRemise';
-
-const url = "https://blablarando.replit.app/paiement"
+import Urls from '../../../../Constants/urls'
+const mUrl = Urls.dev
+const url = `${mUrl}/creerAchat`
 
 const Paiement = ({ route }) => {
  const navigation = useNavigation();
@@ -16,11 +17,12 @@ const Paiement = ({ route }) => {
   const pxGros = data.vente.prixEnGros ? parseInt(data.vente.prixEnGros) : 1
   const px = parseInt(data.vente.prix)
 
-  const handleConfirmerPaiement = () => {
+  const handleConfirmerPaiement = async () => {
 
     const body = {cout,data,placesVendues,emailUtilisateur};
     console.log('body : ',body)
-    const res = postPaiement(url,body)
+    console.log('url : ',url)
+    const res = await postPaiement(url,body)
     
     console.log('res : ',res)
     navigation.navigate('DemandeConfirme',{cout,data,placesVendues,emailUtilisateur});

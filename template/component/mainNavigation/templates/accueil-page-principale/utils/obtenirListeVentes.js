@@ -10,7 +10,7 @@ const obtenirListeVentes = async () => {
     
     try{
         const response = await axios.get(url)
-        console.log('erfsqe :',response)
+        console.log('erfsqe :',response.data.liste.length)
 
         const liste = response.data.liste
 
