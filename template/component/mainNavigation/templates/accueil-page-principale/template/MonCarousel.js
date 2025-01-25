@@ -34,6 +34,7 @@ function Index({photos, activeCarousel,setActiveCarousel, index}) {
                        }}
                 data={IMAGES}
                 scrollAnimationDuration={5000}
+                onSnapToItem={(index) => console.log('current index:', index)}
                 renderItem={({ item,index }) => (
                     <View
                         style={{

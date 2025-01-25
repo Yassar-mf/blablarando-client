@@ -4,7 +4,10 @@ import handleAfficherListeVente from './utils/handleAfficherListeVente'
 //setShowMessageVide
 const AfficherMessageVide = ({showMessageVide, 
   setShowMessageVide,
-  setListeVente }) => {
+  setListeVente, gListeVente, setShowReloaded }) => {
+
+   console.log(`mess vide : ${showMessageVide}`)
+   
    return (
       <View>
          {
@@ -18,7 +21,7 @@ const AfficherMessageVide = ({showMessageVide,
                 onPress = {() =>  
                    handleAfficherListeVente(
                    setShowMessageVide,
-                   setListeVente)}>
+                   setListeVente,gListeVente,setShowReloaded)}>
                  <Text>
                    Afficher toutes les ventes
                  </Text>

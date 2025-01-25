@@ -1,11 +1,14 @@
 
+import React, { useEffect, useState } from 'react';
 import { View, Text, Image,StyleSheet, Animated, FlatList, Pressable } from 'react-native';
 import transformParamHandler from '../utils/transformParamHandler'
 import transformHandler from '../utils/transformHandler'
-
+import obtenirPhoto from '../utils/obtenirPhoto'
+import MonCarousel from './MonCarousel'
+import Description from './FLITdesc'
 //vendeurDonnees
 
-const RenderItem = ({ item, index, scrollY, styles, itemHeight, navigation, emailUtilisateur }) => {
+const RenderItem = ({ item, index, scrollY, styles, itemHeight, navigation, emailUtilisateur, activeCarousel, setActiveCarousel}) => {
 
 
 
@@ -15,44 +18,32 @@ const RenderItem = ({ item, index, scrollY, styles, itemHeight, navigation, emai
 
     const [scale,opacity] = transformHandler(inputRange,scaleOutputRange,scrollY,opacityOutputRange)
 
+  const id = item.id ? item.id : 'avatar/mmrddmrff9ezsogu4vjm'
+  const [uriImage, setUriImage] = useState(null)
+
+  useEffect(()=>{
+    const fetchUri = async () =>{
+      const mUri = await obtenirPhoto(id)
+    console.log('m uri :',mUri)
+      setUriImage(mUri)
+    }
+    fetchUri()
+  },[])
+  
     return (
       <Animated.View style={[styles.item, { opacity, transform: [{ scale }] }]}>
         <Pressable 
         onPress={()=>navigation.navigate('Detailles',{data:item,emailUtilisateur:emailUtilisateur})}
-        style={{flexDirection:'row'
+        style={{flexDirection:'column'
 
         }}>
             <Image
-            source={require('../4.jpg')}
+            source={{uri : uriImage}}
             style={{ width: 100, height: 100, borderRadius: 50, marginRight:30 }} // Adjust width, height, and borderRadius
           />
-          <View>
-            <Text style={styles.title}>{`${item.vendeur.nom} ${item.vendeur.prenom}`}</Text>
-
-
-            <Text style={styles.details}>{`places vendues ${item.vente.nombrePlace}`}</Text>
-
-
-            <Text style={styles.details}>{`prix unitaire: ${item.vente.prix}`}</Text>
-
-
-            <Text style={styles.details}>{item.vente.nbPrixEnGros ? `offre pour ${item.vente.nbPrixEnGros} places achetés`:``}</Text>
-            <Text style={styles.details}>{item.vente.prixEnGros ? `${item.vente.prixEnGros} €`:``}</Text>
-
-
-            <Text style={styles.details}>Emballage accepté :</Text>
-
-
-
-            <Text style={styles.details}>{ item.vente.emballageCoffre.sachet == true ? `Sachet`:``}</Text>
-
-
-            <Text style={styles.details}>{ item.vente.emballageCoffre.carton ? `Carton`:``}</Text>
-
-
-            <Text style={styles.details}>{ item.vente.emballageCoffre.doggybag ? `Doggybag`:``}</Text>
-          </View>
+          <Description styles={styles} item={item}/>
         </Pressable>
+        <MonCarousel setActiveCarousel={setActiveCarousel} activeCarousel={activeCarousel} photos={item}/>
       </Animated.View>
     );
   };

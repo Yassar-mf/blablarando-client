@@ -9,7 +9,7 @@ import Description from './FLITdesc'
 import MonCarousel from './MonCarousel'
 const RenderItem = ({ item, index, scrollY, styles, itemHeight, navigation , setActiveCarousel,activeCarousel}) => {
   
-  let inputRange = transformParamH(index,itemHeight)[0]
+    let inputRange = transformParamH(index,itemHeight)[0]
     let scaleOutputRange = transformParamH(index,itemHeight)[1]
     let opacityOutputRange = transformParamH(index,itemHeight)[2]
     const id = item.id ? item.id : 'avatar/mmrddmrff9ezsogu4vjm'

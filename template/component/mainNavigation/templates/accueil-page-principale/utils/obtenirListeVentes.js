@@ -1,18 +1,26 @@
 import axios from 'axios'
-
+import Urls from '../../../../../Constants/urls'
 //const url = "http://localhost:8083/listeVente"
-const url = "https://kilo-kello-4d8ce17ec2a1.herokuapp.com/listeVente"
+const mUrl = Urls.prod
+const url = `${mUrl}/listeVente`
 
 const obtenirListeVentes = async () => { 
 
-    const response = await axios.get(url)
+    console.log('le uuuyyyuuurl :',url)
+    
+    try{
+        const response = await axios.get(url)
+        console.log('erfsqe :',response)
 
-    const liste = response.data.liste.map(itm => ({"ventes":itm._doc,"vendeur":itm.vendeur}))
+        const liste = response.data.liste
 
-    console.log('listrrrrererazrezfafdsqFe :',liste)
-
-    return liste;
+        return liste;
+    }catch(e){
+        console.log('erreur nnnn:',e)
+        return []
+    }
 
 }
+
 
 export default obtenirListeVentes

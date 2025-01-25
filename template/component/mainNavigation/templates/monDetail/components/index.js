@@ -13,23 +13,8 @@ const AffichageDonnees = ({ route }) => {
   const emailUtilisateur = route.params
   const [text, onChangeText] = React.useState(0);
   const [cout,setCout] = React.useState(0)
-  const defaultData = {
-    photo:{
-      secure_id:"123456",
-      secure_url:'https://via.placeholder.com/150'
-    },
-    nom:"yeya",
-    prenom:"yoo",
-    adresse:"123 rue de la gloire",
-    telephone:"1234-567-890",
-    dateDeDepart:"22/09/2024",
-    vol:"23HJGFD",
-    kiloVendu:"20"
-  }
 
   const data = route ? route.params.data : defaultData;
-
-  console.log('Details data :',data)
 
   const handlePayerPress = (cout) => {
 
@@ -49,7 +34,6 @@ const AffichageDonnees = ({ route }) => {
           />
           <Text style={styles.title}>{`${data.vendeur.nom} ${data.vendeur.prenom}`}</Text>
           <Text style={styles.details}>{`Places vendues: ${data.vente.nombrePlace}`}</Text>
-          {/* kilos vendus*/}
           <CustomInput text={text} onChangeText={onChangeText}/>
           <Text>{cout}</Text>
        <Pressable style={styles.payerButton} onPress={ ()=>handlePayerPress(cout) }>

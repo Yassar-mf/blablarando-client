@@ -12,10 +12,14 @@ const MonChoixAchatVendre = ({  navigation, route }) => {
 
        return(
         <View>
+           <View style={{width: "100%",flexDirection:"row", justifyContent: "space-between"}}>
            <CustomBoutonChoix titre={"VENDRE"} navigation={navigation} route={route}  state={state} />
            <CustomBoutonChoix titre={"ACHETER"} navigation={navigation} route={route}  state={state} />
-           {barDeReChercheAffichee && <CustomFiltre route={route} navigation={navigation}/>}
 
+        </View>
+         <View>
+          {barDeReChercheAffichee && <CustomFiltre route={route} navigation={navigation}/>}
+         </View>
         </View>
 
        )

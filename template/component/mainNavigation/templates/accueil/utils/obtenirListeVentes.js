@@ -2,7 +2,10 @@ import axios from 'axios'
 
 //const url = "http://localhost:8083/listeVente"
 //const url = "https://kilo-kello-4d8ce17ec2a1.herokuapp.com/listeVente"
-const url = "https://blablarando.replit.app/listeVente"
+import Urls from '../../../../../Constants/urls'
+const mUrl = Urls.prod
+const url = `${mUrl}/listeVente`
+
 
 const obtenirListeVentes = async () => { 
 
@@ -18,9 +21,6 @@ const obtenirListeVentes = async () => {
         return []
     }
 
-    
-
-    return liste;
 
 }
 

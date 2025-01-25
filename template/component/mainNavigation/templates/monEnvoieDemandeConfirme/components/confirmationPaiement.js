@@ -7,7 +7,7 @@ const PaiementConfirme = () => {
   const navigation = useNavigation()
   return (
     <View style={styles.container}>
-      <Pressable onPress={()=> navigation.navigate('Principal')}>
+      <Pressable onPress={()=> navigation.navigate('Principal',{showReloaded: true})}>
         <Text style={styles.text}>Paiement confirmé avec succès !</Text>
       </Pressable>
     </View>
