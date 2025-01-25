@@ -37,7 +37,7 @@ const AffichageDonnees = ({ route }) => {
           <CustomInput text={text} onChangeText={onChangeText}/>
           <Text>{cout}</Text>
        <Pressable style={styles.payerButton} onPress={ ()=>handlePayerPress(cout) }>
-        <Text style={styles.payerButtonText}>Payer</Text>
+        <Text style={styles.payerButtonText}>Passer la commande</Text>
        </Pressable>
     </View>
   );

@@ -41,7 +41,7 @@ const Paiement = ({ route }) => {
         style={styles.confirmerButton}
         onPress={() => handleConfirmerPaiement()}
       >
-        <Text style={styles.confirmerButtonText}>Confirmer Paiement</Text>
+        <Text style={styles.confirmerButtonText}>Confirmer la commande</Text>
       </Pressable>
     </View>
   );
