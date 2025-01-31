@@ -2,10 +2,9 @@
 import React from 'react';
 import { FlatList, View, Pressable, Text, StyleSheet, Image,TextInput } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-
+import styles from './styles'
 import CustomInput from './templates/CustomInput'
 import calcCout from './utils/calculCout'
-import Couleurs from '../../../../../Constants/Couleurs'
 
 
 const AffichageDonnees = ({ route }) => {
@@ -43,29 +42,5 @@ const AffichageDonnees = ({ route }) => {
   );
 };
 
-const styles = StyleSheet.create({
-
-  container: {
-    flex: 1,
-    padding: 10,
-  },
-  payerButton: {
-    backgroundColor: Couleurs.primaryColor_one,
-    padding: 10,
-    marginVertical: 10,
-    borderRadius: 5,
-  },
-  payerButtonText: {
-    color: Couleurs.neutralColor_one,
-    textAlign: 'center',
-    fontWeight: 'bold',
-  },
-  details:{
-
-  },
-  photo:{
-    
-  }
-});
 
 export default AffichageDonnees;

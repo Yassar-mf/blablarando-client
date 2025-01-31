@@ -6,7 +6,7 @@ const { TopTab, BottomTab, MainNavigation, MonVendre, MonChoixAchatVendre ,Paiem
 const Drawer = createDrawerNavigator();
 
 const MonDrawer = ({ route }) => {
-  
+
   return(
       <Drawer.Navigator initialRouteName="Accueil">
 
