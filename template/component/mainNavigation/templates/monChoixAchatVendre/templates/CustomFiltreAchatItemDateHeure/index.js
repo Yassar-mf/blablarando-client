@@ -38,7 +38,11 @@ const CustomFiltreAchatItemDateHeure = ({ setFiltre, filtre, titre}) => {
         }
         console.log('fini')
       };
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 3da4c8d (repush)
     useEffect(()=>{
         console.log('nouvelle date :',selectedDate)
         handleSaveDate(selectedDate,selectedHeure,setFiltre)

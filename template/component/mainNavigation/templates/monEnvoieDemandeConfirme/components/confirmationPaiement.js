@@ -10,7 +10,11 @@ const PaiementConfirme = ({route}) => {
   const navigation = useNavigation()
   return (
     <View style={styles.container}>
+<<<<<<< HEAD
       <Pressable onPress={()=> navigation.navigate('Accueil',{monEmail: emailUtilisateur})}>
+=======
+      <Pressable onPress={()=> navigation.navigate('Accueil',{monEmail: emailUtilisateur,barDeReChercheAffichee: false})}>
+>>>>>>> 3da4c8d (repush)
         <Text style={styles.text}>Paiement confirmé avec succès !</Text>
       </Pressable>
     </View>

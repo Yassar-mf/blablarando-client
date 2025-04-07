@@ -1,6 +1,10 @@
 // App.js
 import React, {useState} from 'react';
+<<<<<<< HEAD
 import {StyleSheet, View, Text, Button, Platform} from 'react-native';
+=======
+import {StyleSheet, View, Text, Pressable, Platform} from 'react-native';
+>>>>>>> 3da4c8d (repush)
 
 import DateTimePicker from '@react-native-community/datetimepicker';
 
@@ -26,7 +30,10 @@ const DateView = ({styles,date, showPicker,
 
   }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3da4c8d (repush)
   return (
     <View style={styles.container}>
       {/* Display the selected date */}
@@ -39,7 +46,16 @@ const DateView = ({styles,date, showPicker,
       {/* The button that used to trigger the date picker */}
       {!isPickerShow && (
         <View style={styles.btnContainer}>
+<<<<<<< HEAD
           <Button title={`Selectionner ${titre}`} color="purple" onPress={()=>showPicker()} />
+=======
+          <Pressable  style={styles.btnItem} onPress={()=>{
+            console.log('youhou on affiche la:',titre)
+            showPicker();
+          }}>
+            <Text>Selectionner {titre}</Text>
+          </Pressable>
+>>>>>>> 3da4c8d (repush)
         </View>
       )}
 

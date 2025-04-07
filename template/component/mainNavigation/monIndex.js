@@ -14,9 +14,15 @@ const Stack = createStackNavigator();
 const MonMainNavigation = ({ route }) => {
 
   return (
+<<<<<<< HEAD
       <Stack.Navigator initialRouteName="Accueil">
         
         <Stack.Screen name="Principal" 
+=======
+      <Stack.Navigator initialRouteName="AccueilPrincipal">
+        
+        <Stack.Screen name="AccueilPrincipal" 
+>>>>>>> 3da4c8d (repush)
                       component={(props)=><MonAccueilPrincipale {...props} routeN={route}/>} 
                       options={{headerShown:false}} />
 

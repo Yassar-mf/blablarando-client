@@ -1,4 +1,5 @@
 import React, { useRef,useState,useEffect } from 'react';
+<<<<<<< HEAD
 import { View, Text, StyleSheet, Animated, FlatList } from 'react-native';
 import RItem from './template/flatListItemTemplate'
 import donnees from './utils/obtenirListeVentes'
@@ -20,16 +21,44 @@ const App = ({ navigation, routeN, route }) => {
   const [showReloaded,
          setShowReloaded]
         = useState(false)
+=======
+import { View, Text,  Animated} from 'react-native';
+import donnees from './utils/obtenirListeVentes'
+import styles from './template/styles'
+import ListeVendeurs from './template/listeDesVendeurs'
+const App = ({ navigation, routeN, route }) => {
+  const scrollY = useRef(new Animated.Value(0)).current;
+  const email = routeN.params ? routeN.params.monEmail 
+  : route.params.monEmail ? route.params.monEmail:'' ;
+  console.log('show message vide : ',routeN.params);
+  console.log('show message vide : ',route);
+
+  const [listeVente, setListeVente] = useState([]);
+  const [gListeVente, setGListeVente] = useState([]);
+  const [showReloaded,
+         setShowReloaded]
+        = useState(false)
+  
+>>>>>>> 3da4c8d (repush)
   useEffect(() => {
      const fetchListeVente = async () => {
         try {
           const liste = await donnees()
+<<<<<<< HEAD
           const listeFiltree = routeN
             .params.listeAchatsFiltre; 
           if(listeFiltree.liste.length > 0){
             setListeVente(listeFiltree.liste)
           }else{
             setShowMessageVide(true)
+=======
+          const listeFiltree = routeN.params.listeAchatsFiltre;
+
+          
+          if(listeFiltree.liste.length > 0){
+            setListeVente(listeFiltree.liste)
+          }else{
+>>>>>>> 3da4c8d (repush)
             setGListeVente(liste)
           }
           //cas ou on vient de passer une commande
@@ -44,13 +73,18 @@ const App = ({ navigation, routeN, route }) => {
     fetchListeVente()
   }, [])
 
+<<<<<<< HEAD
   useEffect(()=>{
     console.log('lia liiiste',listeVente)
   },[listeVente,showReloaded])
+=======
+
+>>>>>>> 3da4c8d (repush)
 
 
   return (
     <View style={styles.container}>
+<<<<<<< HEAD
       <Text>{email=='email'?'':email}</Text>
       <AnimatedFlatList
         data={listeVente}
@@ -79,6 +113,18 @@ const App = ({ navigation, routeN, route }) => {
 
         setShowReloaded={setShowReloaded}
         />
+=======
+      <View style={styles.emailContainer}>
+        <Text>{email=='email'?'':email}</Text>
+      </View>
+        <ListeVendeurs 
+          navigation={navigation}
+          email={email}
+          listeVente={gListeVente}
+          />
+
+
+>>>>>>> 3da4c8d (repush)
 
     </View>)
 };

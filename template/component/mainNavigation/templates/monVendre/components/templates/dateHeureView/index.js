@@ -3,6 +3,11 @@ import React, {useState, useEffect, use} from 'react';
 import {StyleSheet, View, Text, Button, Platform} from 'react-native';
 import DateView from './dateView'
 import styles from './styles'
+<<<<<<< HEAD
+=======
+import gStyles from '../styles/mesStyles'
+
+>>>>>>> 3da4c8d (repush)
 
 const DateViewIndex = ({date, setDate}) => {
   const [mDate, setMDate] = useState(new Date(Date.now()))
@@ -25,13 +30,21 @@ const DateViewIndex = ({date, setDate}) => {
     console.log('initié') 
     setIsPickerShowDate(true);
     console.log('fini')
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 3da4c8d (repush)
   };
   const showPickerTime = () => {
     console.log('initié') 
     setIsPickerShowTime(true);
     console.log('fini')
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 3da4c8d (repush)
   };
 
   const onChange = (event, value) => {
@@ -56,7 +69,11 @@ const DateViewIndex = ({date, setDate}) => {
     newDate.setHours(mHeure.getHours(), mHeure.getMinutes(), 0, 0);
     setDate(newDate); // Update the parent date state
   }, [mDate, mHeure]); // Dependencies: both `mDate` and `mHeure`
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 3da4c8d (repush)
   return (
      <>
         <DateView styles={styles} date={mDate} 
@@ -77,7 +94,11 @@ const DateViewIndex = ({date, setDate}) => {
           mode={"time"}
           titre={"l'heure"}
           />
+<<<<<<< HEAD
         <Text>date séléctionnée {cDate}</Text>
+=======
+        <Text style={gStyles.isT}>date séléctionnée {cDate}</Text>
+>>>>>>> 3da4c8d (repush)
      </>
   );
 };

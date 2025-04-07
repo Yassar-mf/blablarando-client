@@ -5,10 +5,17 @@ const monCustomTextInput = ({titre, valeur, state,setValeur}) => {
      console.log('vvvvv :', valeur)
      return(
        <View>
+<<<<<<< HEAD
         <Text>{titre}</Text>
         <TextInput style={styles.inpS} value={valeur ? valeur : ""} 
                    onChangeText={setValeur}
                    
+=======
+        <Text style={styles.isT}>{titre}</Text>
+        <TextInput style={styles.inpS} value={valeur ? valeur : ""} 
+                   onChangeText={setValeur}
+
+>>>>>>> 3da4c8d (repush)
                    keyboardType={state.type} 
                    />
        </View>

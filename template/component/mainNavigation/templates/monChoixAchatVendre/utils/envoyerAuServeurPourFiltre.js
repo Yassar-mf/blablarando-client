@@ -4,7 +4,12 @@ import goPagePrincipaleFiltre from './goPagePrincipaleFiltre';
 
 const url = `https://blablarando.replit.app/listeParFiltre`
 
+<<<<<<< HEAD
 const envoyerAuServeurPourFiltre = async (kilo, prixMax, dateTime,navigation) => {
+=======
+const envoyerAuServeurPourFiltre = async (kilo, prixMax, dateTime,navigation,listeFiltree, 
+                                          setListeFiltree,setShowMessageVide) => {
+>>>>>>> 3da4c8d (repush)
 
     const newDate = new Date(dateTime.heure);
 
@@ -26,8 +31,17 @@ const envoyerAuServeurPourFiltre = async (kilo, prixMax, dateTime,navigation) =>
         const response = await axios.post(url,filtreage);
         const liste = response.data;
 
+<<<<<<< HEAD
 
         goPagePrincipaleFiltre(liste,navigation)
+=======
+        setListeFiltree(liste)
+        
+        console.log('youhouhjkkjl lljkjhdfq :',liste)
+        console.log('youhouhjkkjl')
+        setShowMessageVide(true)
+        //goPagePrincipaleFiltre(liste,navigation)
+>>>>>>> 3da4c8d (repush)
         return response.data;
     } catch (error) {
         console.error('Erreur lors de l\'envoi au serveur:', error);

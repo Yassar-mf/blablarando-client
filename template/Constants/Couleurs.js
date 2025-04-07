@@ -15,7 +15,12 @@ const listePalette = [
               textColor: "#FFFFFF",         // Blanc
               textColorB: "#000",         // noir
               backgroundColor: "#FFFFFF",   // Blanc
+<<<<<<< HEAD
               buttonColor: "#DC143C"        // Rouge
+=======
+              buttonColor: "#DC143C",        // Rouge
+              alertColor: "#DC143C"        // Rouge
+>>>>>>> 3da4c8d (repush)
       }
     },
     {id:"ssd",
@@ -33,7 +38,12 @@ const listePalette = [
               textColor: "#FFFFFF",         // Blanc
               textColorB: "#000",         // noir
               backgroundColor: "#FFFFFF",   // Blanc
+<<<<<<< HEAD
               buttonColor: "#DC143C"        // Rouge
+=======
+              buttonColor: "#DC143C",        // Rouge
+              alertColor: "#DC143C"        // Rouge
+>>>>>>> 3da4c8d (repush)
       }
     },
     {id:"cameroun",
@@ -51,7 +61,12 @@ const listePalette = [
               textColor: "#FFFFFF",         // Blanc
               textColorB: "#000",         // noir
               backgroundColor: "#FFFFFF",   // Blanc
+<<<<<<< HEAD
               buttonColor: "#DC143C"        // Rouge
+=======
+              buttonColor: "#DC143C",        // Rouge
+              alertColor: "#DC143C"        // Rouge
+>>>>>>> 3da4c8d (repush)
       }
     },
 

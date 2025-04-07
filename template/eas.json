@@ -16,7 +16,12 @@
       "preview4": {
         "distribution": "internal"
       },
+<<<<<<< HEAD
       "production": {}
+=======
+      "production": {},
+      "slug": "blablarando",
+>>>>>>> 3da4c8d (repush)
     }
   }
   
