@@ -1,27 +1,4 @@
-<<<<<<< HEAD
-import {useState, useEffect} from 'react'
-import {View} from 'react-native'
-import CustomBoutonChoix from './templates/CustomBoutonChoix'
-import CustomFiltre from './templates/CustomFiltre'
-const MonChoixAchatVendre = ({  navigation, route }) => {
 
-   const [barDeReChercheAffichee,setBarDeReChercheAffichee] = useState(false)
-
-   const state = {
-      setBarDeReChercheAffichee, navigation, route
-   }
-
-       return(
-        <View>
-           <View style={{width: "100%",flexDirection:"row", justifyContent: "space-between"}}>
-           <CustomBoutonChoix titre={"VENDRE"} navigation={navigation} route={route}  state={state} />
-           <CustomBoutonChoix titre={"ACHETER"} navigation={navigation} route={route}  state={state} />
-
-        </View>
-         <View>
-          {barDeReChercheAffichee && <CustomFiltre route={route} navigation={navigation}/>}
-         </View>
-=======
 import React,{useState, useEffect, useCallback} from 'react'
 import {useFocusEffect} from '@react-navigation/native'
 import {View, Dimensions} from 'react-native'
@@ -105,7 +82,6 @@ const MonChoixAchatVendre = ({  navigation, route }) => {
             listeFiltree={listeFiltree}
             navigation={navigation}
             />
->>>>>>> 3da4c8d (repush)
         </View>
 
        )

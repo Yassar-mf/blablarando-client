@@ -16,10 +16,6 @@ const TextInputExample = ({text, onChangeText}) => {
         onChangeText={onChangeText}
         keyboardType="numeric"
         value={text}
-<<<<<<< HEAD
-=======
-        
->>>>>>> 3da4c8d (repush)
       />
     </SafeAreaView>
   );

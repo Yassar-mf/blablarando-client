@@ -8,10 +8,9 @@ const monTransformHandler = (inputRange,scaleOutputRange,scrollY,opacityOutputRa
     const opacity = scrollY.interpolate({
       inputRange,
       outputRange: opacityOutputRange,
-<<<<<<< HEAD
-=======
+
       extrapolate: "clamp",
->>>>>>> 3da4c8d (repush)
+
     });
 
     return [scale,opacity]

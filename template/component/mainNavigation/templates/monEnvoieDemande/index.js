@@ -5,11 +5,8 @@ import styles from './styles';
 import postPaiement from './utils/postPaiement';
 import calculerPrixTotal from './utils/calculRemise';
 import Urls from '../../../../Constants/urls'
-<<<<<<< HEAD
-const mUrl = Urls.dev
-=======
 const mUrl = Urls.prod
->>>>>>> 3da4c8d (repush)
+
 const url = `${mUrl}/creerAchat`
 
 const Paiement = ({ route }) => {
@@ -34,11 +31,7 @@ const Paiement = ({ route }) => {
 
   return (
     <View style={styles.container}>
-<<<<<<< HEAD
-      <Text style={styles.text}>Kilos vendus : {placesVendues}</Text>
-=======
       <Text style={styles.text}>Places vendus : {placesVendues}</Text>
->>>>>>> 3da4c8d (repush)
       <Text style={styles.text}>Prix total : {cout}€</Text>
       <Text style={{color:"green", fontWeight:"bold"}}>
         { nbGros > 1 && placesVendues >= nbGros ?

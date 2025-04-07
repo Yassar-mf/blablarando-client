@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-const goPagePrincipaleFiltre = (liste,navigation) => {
-
-  console.log('liste avant acheter :',liste)
-  navigation.navigate('Acheter',{listeAchatsFiltre: liste})
-=======
 import {CommonActions} from '@react-navigation/native'
 const goPagePrincipaleFiltre = (liste,navigation) => {
 
@@ -20,7 +14,6 @@ const goPagePrincipaleFiltre = (liste,navigation) => {
       }
     )
   )
->>>>>>> 3da4c8d (repush)
 
 }
 

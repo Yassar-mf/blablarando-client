@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-const handlePress = (titre, setBarDeReChercheAffichee, navigation, route) => {
-
-    console.log('rooute params :',route.params)
-    
-    const email = route.params.monEmail;
-
-    if(titre == "ACHETER"){
-        setBarDeReChercheAffichee(true)
-    }
-
-    if(titre == "VENDRE"){
-        navigation.navigate("Vendre",email)
-    }
-
-}
-
-export default handlePress;
-=======
 import handlePressChoix from './handlePressChoix'
 import Animated, { withTiming, Easing } from 'react-native-reanimated';
 
@@ -43,4 +24,4 @@ const handlePress = (x,y, xf, yf,titre, setBarDeReChercheAffichee,navigation,rou
 }
 
 export default handlePress
->>>>>>> 3da4c8d (repush)
+

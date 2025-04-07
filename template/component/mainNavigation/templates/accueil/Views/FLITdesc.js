@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {Text,View} from 'react-native'
 
 const Description = ({styles,item}) => {

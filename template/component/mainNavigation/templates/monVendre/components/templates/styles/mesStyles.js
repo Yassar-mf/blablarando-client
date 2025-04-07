@@ -1,9 +1,5 @@
 import inpStyle from './InputStyle'
-<<<<<<< HEAD
 
-const exps = {
-  inpS: inpStyle,
-=======
 import btvStyle from './btvStyle'
 import lieuRandoStyle from './lieuRandoStyle'
 import lieuRandoItemStyle from './lieuRandoItemStyle'
@@ -14,6 +10,6 @@ const exps = {
   lrStyle: lieuRandoStyle,
   lrIStyle: lieuRandoItemStyle,
   isT: inputStyleText
->>>>>>> 3da4c8d (repush)
+
 }
 export default exps;

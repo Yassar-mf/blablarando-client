@@ -1,11 +1,8 @@
 // App.js
 import React, {useState} from 'react';
 import {StyleSheet, View, Text, Button, Platform} from 'react-native';
-<<<<<<< HEAD
 
-=======
 import Couleurs from '../../../Constants/Couleurs';
->>>>>>> 3da4c8d (repush)
 import DateTimePicker from '@react-native-community/datetimepicker';
 
 const DateView = ({styles,date, showPicker, 
@@ -41,16 +38,11 @@ const DateView = ({styles,date, showPicker,
         </Text>
       </View>
 
-<<<<<<< HEAD
-      {/* The button that used to trigger the date picker */}
-      {!isPickerShow && (
-        <View style={styles.btnContainer}>
-          <Button title={`Selectionner ${titre}`} color="purple" onPress={()=>showPicker()} />
-=======
+
       {!isPickerShow && (
         <View style={styles.btnContainer}>
           <Button title={`Selectionner ${titre}`} color={Couleurs.accentColor} onPress={()=>showPicker()} />
->>>>>>> 3da4c8d (repush)
+
         </View>
       )}
 

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 3da4c8d (repush)
 const CLOUD_NAME = 'di2cd2b6l';
 
 const obtenirPhoto = async (publicId, options = {}) => {
@@ -16,9 +12,5 @@ const obtenirPhoto = async (publicId, options = {}) => {
 };
 
 
-<<<<<<< HEAD
-  
-=======
 
->>>>>>> 3da4c8d (repush)
 export default obtenirPhoto

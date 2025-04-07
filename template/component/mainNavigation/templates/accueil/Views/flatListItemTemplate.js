@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React, { useEffect, useState } from 'react';
 import { View, Text, Image,StyleSheet, Animated,FlatList, Pressable } from 'react-native';

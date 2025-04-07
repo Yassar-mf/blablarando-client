@@ -1,10 +1,8 @@
 import axios from 'axios'
 import urls from '../../../../../Constants/urls'
-<<<<<<< HEAD
-const bUrl = urls.dev
-=======
+
 const bUrl = urls.prod
->>>>>>> 3da4c8d (repush)
+
 const url = `${bUrl}creerVente`
 console.log('yyyyyyy url :',url)
 const handleCreerVente = async (navigation,data) =>{

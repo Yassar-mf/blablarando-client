@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 import * as React from 'react';
 import { Dimensions, Text, View,Image } from 'react-native';

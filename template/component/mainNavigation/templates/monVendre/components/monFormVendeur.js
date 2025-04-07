@@ -3,14 +3,7 @@ import React,{useState} from 'react'
 import {ScrollView,View,Pressable,Text} from 'react-native'
 import MonListeCustomInput from './templates/listeCustomInput'
 const MonFormulaire = ({ route }) => {
-<<<<<<< HEAD
-   const defaultData = {nom:"",prenom:"",email:"yass.maanli@gmail.com"};
-   const [lieuRandonnee, setLieuRandonnee] = useState("")
-   const [nom,setNom] = useState(route.params.nom ? route.params.nom : "Maanli")
-   const [prenom,setPrenom] = useState(route.params.prenom ? route.params.prenom : "Yassar")
-   const [adresse,setAdresse] = useState("")
-   const [email,setEmail] = useState(route ? route.params.monEmail : defaultData)
-=======
+
   const mRoute = route ? route.params : {nom:"",prenom:"",monEmail:"",tel:"",adresse:"",ville:"",code_postal:""}
   const defaultData = {nom:"",prenom:"",email:""};
    const [lieuRandonnee, setLieuRandonnee] = useState("")
@@ -18,7 +11,6 @@ const MonFormulaire = ({ route }) => {
    const [prenom,setPrenom] = useState(route.params ? route.params.prenom : "")
    const [adresse,setAdresse] = useState("")
    const [email,setEmail] = useState(route.params ? route.params.monEmail : defaultData)
->>>>>>> 3da4c8d (repush)
    const [telephone,setTelephone] = useState("+12 345 67 89 10")
    const [dateDeDepart,setDateDeDepart] = useState(new Date(Date.now()))
    const [nbPlace, setNbPlace] = useState("1")
